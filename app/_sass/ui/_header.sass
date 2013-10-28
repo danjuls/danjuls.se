@@ -1,0 +1,52 @@
+header
+  +columns(12, true)
+
+  position: relative
+  z-index: 1000
+  padding-top: 30px
+
+  .wrapper
+    overflow: hidden
+    border-bottom: 1px solid rgba(204,204,204, .4)
+
+    .title
+      width: 115px
+      margin: 0 auto
+
+      h1
+        margin: 2px 0 0
+        font-weight: normal
+
+      p
+        margin: 0
+        font-style: italic
+        font-size: .80em
+
+    h2.caption
+      margin: 10px 0 0 0
+      font-weight: normal
+      float: right
+
+      span
+        display: inline-block
+        position: relative
+        padding: 5px 10px 5px 16px
+        display: none
+
+        &.about
+          background-color: rgba(114, 97, 110, 1)
+
+        &.resume
+          background-color: rgba(0, 130, 200, 1)
+
+  +viewports(up-from medium)
+    .wrapper
+      min-height: 55px
+
+      .title
+        margin-left: 30px
+        padding: 0 30px 10px 0
+        border-right: 2px solid rgba(204,204,204, .4)
+        float: left
+        width: auto
+

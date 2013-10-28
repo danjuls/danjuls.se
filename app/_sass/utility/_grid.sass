@@ -1,0 +1,10 @@
+// Return single column width
+@function one_col()
+  @return (100% - $gutter * ($cols - 1)) / $cols
+
+// Calculate Grid Column Widths
+=columns($num, $pad: false)
+  width: one_col() * $num + $gutter * ($num - 1)
+  @if $pad == true
+    padding-left: $gutter
+    padding-right: $gutter

@@ -1,0 +1,80 @@
+/**
+ * General Typography
+ *
+ */
+
+$font-family: "Open Sans", Helvetica, Arial, DroidSans, sans-serif
+$font-family-heading: "Ubuntu" , "Lato","HelveticaNeue-Light","Helvetica Neue Light"
+
+%base-font
+  font:
+    family: $font-family
+    size: $font-size
+    weight: 300
+  line-height: 1.5
+
+%base-link a
+  color: $link-color
+  text-decoration: underline
+
+html
+  font-size: $font-size
+  font-family: $font-family
+
+body
+  font-size: $font-size
+
+p
+  @extend %base-font
+  @extend %base-link
+  font-size: $font-size
+  margin: 0 1rem 0
+
+strong
+  font-weight: 500
+
+em, i
+  font-style: italic
+
+small
+  font:
+    size: .8rem
+    weight: 300
+
+// Headings
+h1,
+h2,
+h3,
+h4
+  font:
+    family: $font-family-heading
+    weight: normal
+  line-height: 0.9
+
+h1
+  font-size: 2rem
+  margin-bottom: 2rem
+
+h2
+  font-size: 1.875rem
+  margin-bottom: .313rem
+
+h3
+  font-size: 1.725rem
+
+h4
+  font-size: 1.5rem
+
+.label
+  font:
+    family: $font-family
+    size: .9rem
+    weight: 300
+
+hr
+  display: block
+  height: 1px
+  border: 0
+  border-top: 1px solid #ccc
+  margin: 1em 0
+  padding: 0
