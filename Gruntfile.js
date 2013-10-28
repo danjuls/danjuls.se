@@ -370,8 +370,15 @@ module.exports = function (grunt) {
         'coffee:dist',
         'copy:dist'
       ]
+    },
+    bower: {
+        target: {
+            rjsConfig: 'app/config.js'
+        }
     }
   });
+
+  grunt.loadNpmTasks('grunt-bower-requirejs');
 
   // Define Tasks
   grunt.registerTask('serve', function (target) {
@@ -432,4 +439,6 @@ module.exports = function (grunt) {
     'test',
     'build'
   ]);
+
+  grunt.registerTask('default', ['bower']);
 };
