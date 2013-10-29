@@ -3,19 +3,22 @@ header
 
   position: relative
   z-index: 1000
-  padding-top: 30px
+  padding-top: 2%
 
   .wrapper
     overflow: hidden
     border-bottom: 1px solid rgba(204,204,204, .4)
 
     .title
-      width: 115px
+      width: 150px
       margin: 0 auto
-
+      text-align: center
       h1
         margin: 2px 0 0
         font-weight: normal
+
+        a
+          text-decoration: none
 
       p
         margin: 0
@@ -40,6 +43,7 @@ header
           background-color: rgba(0, 130, 200, 1)
 
   +viewports(up-from medium)
+    padding-top: 30px
     .wrapper
       min-height: 55px
 
@@ -49,4 +53,5 @@ header
         border-right: 2px solid rgba(204,204,204, .4)
         float: left
         width: auto
+        text-align: left
 

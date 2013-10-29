@@ -23,6 +23,7 @@ html
 
 body
   font-size: $font-size
+  @extend %base-link
 
 p
   @extend %base-font
@@ -41,6 +42,9 @@ small
     size: .8rem
     weight: 300
 
+ul
+  list-style: square
+
 // Headings
 h1,
 h2,
@@ -48,8 +52,7 @@ h3,
 h4
   font:
     family: $font-family-heading
-    weight: normal
-  line-height: 0.9
+  line-height: 1
 
 h1
   font-size: 2rem

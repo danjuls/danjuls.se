@@ -5,7 +5,8 @@
     "impress.js": "~0.5.3",
     "normalize.scss": "~2.1.2",
     "viewports": "~0.5.0",
-    "requirejs": "~2.1.9",
-    "jquery": "~2.0.3"
+    "jquery": "~2.0.3",
+    "classie": "~1.0.0",
+    "modernizr": "~2.6.2"
   }
 }

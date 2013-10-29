@@ -371,14 +371,36 @@ module.exports = function (grunt) {
         'copy:dist'
       ]
     },
-    bower: {
-        target: {
-            rjsConfig: 'app/config.js'
-        }
+    'bower-install': {
+
+      target: {
+
+        // Point to the html file that should be updated
+        // when you run `grunt bower-install`
+        html: 'app/_layouts/default.html',
+
+        // Optional:
+
+        // If your file paths shouldn't contain a certain
+        // portion of a url, it can be excluded
+        ignorePath: 'app/',
+
+        // Customize how your stylesheets are included on
+        // your page.
+        //
+        //   default: '<link rel="stylesheet" href="{{filePath}}" />'
+        cssPattern: '<link href="{{filePath}}" rel="stylesheet">',
+
+        // Customize how your <script>s are included into
+        // your HTML file.
+        //
+        //   default: '<script src="{{filePath}}"></script>'
+        jsPattern: '<script type="text/javascript" src="{{filePath}}"></script>'
+      }
     }
   });
 
-  grunt.loadNpmTasks('grunt-bower-requirejs');
+
 
   // Define Tasks
   grunt.registerTask('serve', function (target) {
@@ -394,6 +416,7 @@ module.exports = function (grunt) {
       'watch'
     ]);
   });
+
 
   grunt.registerTask('server', function () {
     grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
@@ -437,8 +460,10 @@ module.exports = function (grunt) {
   grunt.registerTask('default', [
     'check',
     'test',
-    'build'
+    'build',
+    'bower',
   ]);
 
-  grunt.registerTask('default', ['bower']);
+  grunt.loadNpmTasks('grunt-bower-install');
+  grunt.loadNpmTasks('grunt-contrib-coffee');
 };
