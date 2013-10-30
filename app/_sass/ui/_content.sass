@@ -1,6 +1,24 @@
-.st-container
-  +viewports(up-from medium)
+.container,
+.pusher,
+.content
+  height: 100%
 
+.content
+  overflow-y: scroll
+
+.content,
+.content-inner
+  position: relative
+
+.container
+  position: relative
+  overflow: hidden
+  -webkit-perspective: 1500px
+  perspective: 1500px
+  -webkit-perspective-origin: 0% 50%
+  perspective-origin: 0% 50%
+
+  +viewports(up-from medium)
 
     .mobile
       display: none
@@ -9,23 +27,35 @@
 .pages
   +columns(12, true)
   position: relative
-  width: 100%
   height: 100%
   -webkit-perspective: 1200px
   -moz-perspective: 1200px
   perspective: 1200px
 
+  section
+    padding-top: 1.2rem
+
+    h2
+      text-align: center
+
+    span.primary
+      display: inline-block
+      padding: 2px 6px
+      padding: 0 0px
+      border-width: 0 0 3px 0
+      border-style: solid
+      border-color: #70b0eb
 
   +viewports(up-to medium)
 
     section
-      width: 100%
+      +columns(12, true)
       height: auto
       position: absolute
       top: 0
       left: 0
       visibility: hidden
-      overflow: hidden
+      // overflow: hidden
       backface-visibility: hidden
       -webkit-backface-visibility: hidden
       -moz-backface-visibility: hidden
@@ -41,7 +71,106 @@
         visibility: visible
         z-index: 1
 
-.pt-page-ontop
+
+
+.social
+  padding: 0
+  list-style: none
+
+  li
+    display: inline-block
+    margin-bottom: -3px
+
+    a
+      display: block
+      float: left
+      line-height: 90%
+      font-family: 'pictonic'
+      font-size: 3rem
+      padding: .2em .2em .15em .2em
+      background: #eeeeee
+      background-color: rgba(0, 0, 0, 0.1)
+      &:hover
+        background-color: #000
+        color: #fff
+      &.drupal:hover
+        background-color: #29a8e0
+      &.facebook:hover
+        background-color: #3c5fac
+      &.twitter:hover
+        background-color: #5ec3df
+      &.linkedin:hover
+        background-color: #2089b5
+      &.google:hover
+        background-color: #c63d2d
+      &.github:hover
+        background-color: #000
+      &.skype:hover
+        background-color: #00aff0
+      &.tumblr:hover
+        background-color: #2C4762
+
+// Resume
+.history-unit
+  padding-left: 20px
+  margin-bottom: 30px
+  border-width: 0 0 0 1px
+  border-style: solid
+  border-color: #70B0EB
+
+  h4
+    margin-bottom: 0px
+    font-weight: 400
+    font-size: 1rem //was 1.10em
+
+  h4 .work-time
+    float: right
+    font-size: .9em
+    border-width: 0 0 2px 0
+    border-style: solid
+
+  h5
+    margin: .4em 0 1em
+    font-weight: normal
+    font-size: .9em
+    padding-left: 9px
+    border-width: 0 0 0 30px
+    border-style: solid
+    color: #999999
+
+    span
+      padding: 3px 6px
+
+
+  h5.no-border
+    border: none
+    margin-bottom: 0
+    margin-top: 23px
+    padding-left: 0
+    vertical-align: bottom
+
+  h5, .history-unit h4 .work-time
+    border-color: #eeeeee
+
+
+span.black
+  color: white
+  background-color: black
+  display: inline-block
+  padding: 6px
+
+.history-group
+  h3
+    font-size: 1.17rem
+
+.icon-wh
+  font-size: 3em
+  float: left
+
+.cv
+  margin: 3em 0 3em
+
+.page-ontop
   z-index: 999
 
 .text-container
@@ -49,3 +178,35 @@
   h2
     font-size: 15vw
     text-align: center
+
+
+.pusher
+  position: relative
+  left: 0
+  z-index: 99
+  height: 100%
+  -webkit-transition: -webkit-transform 0.5s
+  transition: transform 0.5s
+  -webkit-transform-style: preserve-3d
+  transform-style: preserve-3d
+
+  &::after
+    position: absolute
+    top: 0
+    right: 0
+    width: 0
+    height: 0
+    background: rgba(0,0,0,0.2)
+    content: ''
+    opacity: 0
+    -webkit-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s
+    transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s
+
+.profile-image
+  margin-bottom: 20px
+  text-align: center
+  img
+    width: 15rem
+    border-radius: 50%
+    -webkit-border-radius: 50%
+    -moz-border-radius: 50%
