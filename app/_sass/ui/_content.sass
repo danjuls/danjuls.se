@@ -5,6 +5,7 @@
 
 .content
   overflow-y: scroll
+  -webkit-overflow-scrolling: touch
 
 .content,
 .content-inner
@@ -55,7 +56,7 @@
       top: 0
       left: 0
       visibility: hidden
-      // overflow: hidden
+      overflow: hidden
       backface-visibility: hidden
       -webkit-backface-visibility: hidden
       -moz-backface-visibility: hidden
@@ -73,7 +74,7 @@
 
 
 
-.social
+.connect
   padding: 0
   list-style: none
 
@@ -205,6 +206,31 @@ span.black
 .profile-image
   margin-bottom: 20px
   text-align: center
+  img
+    width: 15rem
+    border-radius: 50%
+    -webkit-border-radius: 50%
+    -moz-border-radius: 50%
+
+.sorcery
+
+  .span4
+    text-align: center
+
+  img
+    width: 20%
+
+  a
+    color: #006699
+    text-decoration: none
+
+    &:visited
+      color: #006699
+
+    &:link
+      color: #006699
+
+.social
   img
     width: 15rem
     border-radius: 50%
