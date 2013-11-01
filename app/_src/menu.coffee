@@ -1,5 +1,5 @@
 (->
-  
+
   # http://stackoverflow.com/a/11381730/989439
   mobilecheck = ->
     check = false
@@ -10,15 +10,13 @@
   init = ->
     menu = document.getElementById("bt-menu")
     trigger = menu.querySelector("a.bt-menu-trigger")
-    
-    # triggerPlay only for demo 6
-    triggerPlay = document.querySelector("a.bt-menu-trigger-out")
-    
+
     # event type (if mobile use touch events)
     eventtype = (if mobilecheck() then "touchstart" else "click")
     resetMenu = ->
       classie.remove menu, "bt-menu-open"
       classie.add menu, "bt-menu-close"
+
 
     closeClickFn = (ev) ->
       resetMenu()
@@ -37,13 +35,6 @@
         classie.add menu, "bt-menu-open"
         overlay.addEventListener eventtype, closeClickFn
 
-    if triggerPlay
-      triggerPlay.addEventListener eventtype, (ev) ->
-        ev.stopPropagation()
-        ev.preventDefault()
-        classie.remove menu, "bt-menu-close"
-        classie.add menu, "bt-menu-open"
-        overlay.addEventListener eventtype, closeClickFn
 
   init()
 )()

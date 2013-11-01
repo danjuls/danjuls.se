@@ -231,8 +231,28 @@ span.black
       color: #006699
 
 .social
+
+  .feed-item
+    +columns(12)
+    @include border-radius(.4em)
+    margin-bottom: 1em
+    border: 1px solid #e1e1e1
+    position: relative
+    padding: .5em
+
+  i
+    position: absolute
+    top: -.5em
+    left: -.3em
+    font-size: 2em
+
+    &.icon-instagram
+      font-size: 1.7em
+      top: -.4em
+
   img
     width: 15rem
     border-radius: 50%
     -webkit-border-radius: 50%
     -moz-border-radius: 50%
+

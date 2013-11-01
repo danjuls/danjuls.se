@@ -37,6 +37,5 @@ SidebarMenuEffects = (->
         ), 25
         document.addEventListener eventtype, bodyClickFn
 
-
   init()
 )()

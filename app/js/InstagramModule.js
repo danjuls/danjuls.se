@@ -23,7 +23,6 @@ var InstagramModule = SocialFeed.Modules.extend({
   , orderBy: function (item) {
     // orderBy must be implemented. Return a numeric value to sort by.
     // item is an entity from the results.
-    console.log(-item.created_time);
     return -item.created_time;
   }
 

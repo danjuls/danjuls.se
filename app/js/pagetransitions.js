@@ -18,6 +18,7 @@ var PageTransitions = (function() {
 		},
 		// animation end event name
 		animEndEventName = animEndEventNames[ Modernizr.prefixed( 'animation' ) ],
+    container = document.getElementById("container"),
 		// support css animations
 		support = Modernizr.cssanimations;
 
@@ -100,7 +101,7 @@ var PageTransitions = (function() {
 	function resetPage( $outpage, $inpage ) {
 		$outpage.attr( 'class', $outpage.data( 'originalClassList' ) );
 		$inpage.attr( 'class', $inpage.data( 'originalClassList' ) + ' pt-page-current' );
-
+    classie.remove(container, "mobile-menu-open");
 	}
 
 	init();
