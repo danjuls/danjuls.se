@@ -102,7 +102,6 @@ module.exports = (grunt) ->
 
       dist:
         options:
-          config: '.config.rb',
           generatedImagesDir: "<%= yeoman.dist %>/img/generated"
 
       server:
@@ -250,7 +249,7 @@ module.exports = (grunt) ->
           src: ["img/**/*", "fonts/**/*", "!**/_*{,/**}"]
 
           # Explicitly add any files your site needs for distribution here
-          #'_bower_components/jquery/jquery.js',
+          '_bower_components/jquery/jquery.js',
           #'favicon.ico',
           #'apple-touch*.png'
           dest: "<%= yeoman.dist %>"
