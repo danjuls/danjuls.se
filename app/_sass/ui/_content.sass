@@ -1,6 +1,4 @@
-.container,
-.pusher,
-.content
+.container, .pusher, .content, .content-inner
   height: 100%
 
 .content
@@ -9,29 +7,30 @@
 
 .content,
 .content-inner
+  +columns(12)
   position: relative
 
 .container
   position: relative
-  overflow: hidden
-  -webkit-perspective: 1500px
-  perspective: 1500px
-  -webkit-perspective-origin: 0% 50%
-  perspective-origin: 0% 50%
+
+  +viewports(up-to medium)
+    overflow: hidden
+    -webkit-perspective: 1500px
+    perspective: 1500px
+    -webkit-perspective-origin: 0% 50%
+    perspective-origin: 0% 50%
 
   +viewports(up-from medium)
-
+    +columns(12)
     .mobile
       display: none
 
 
 .pages
-  +columns(12, true)
+  +columns(12)
   position: relative
   height: 100%
-  -webkit-perspective: 1200px
-  -moz-perspective: 1200px
-  perspective: 1200px
+
 
   section
     padding-top: 1.2rem
@@ -48,9 +47,12 @@
       border-color: #70b0eb
 
   +viewports(up-to medium)
+    -webkit-perspective: 1200px
+    -moz-perspective: 1200px
+    perspective: 1200px
 
     section
-      +columns(12, true)
+      +columns(12)
       height: auto
       position: absolute
       top: 0
@@ -72,6 +74,15 @@
         visibility: visible
         z-index: 1
 
+  +viewports(up-from medium)
+    width: auto
+    height: auto
+    section
+      // +columns(12, true)
+      width: 900px
+      height: 400px
+      min-height: 500px
+      padding-top: 55px
 
 
 .connect
@@ -177,7 +188,8 @@ span.black
 .text-container
 
   h2
-    font-size: 15vw
+    font-size: 11vw
+    margin-top: 0
     text-align: center
 
 

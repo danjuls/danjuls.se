@@ -102,6 +102,7 @@ module.exports = (grunt) ->
 
       dist:
         options:
+          config: '.config.rb',
           generatedImagesDir: "<%= yeoman.dist %>/img/generated"
 
       server:
