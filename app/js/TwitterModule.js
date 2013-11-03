@@ -5,7 +5,7 @@
     url: function () {
       // Heroku host for node-serverside.js
       // ident is here is count.
-      return 'http://danjuls-twitfeed.herokuapp.com/?count=' + (this.ident || 10)
+      return 'http://danjuls-twitfeed.herokuapp.com/?count=' + (this.ident || 3)
     }
 
     , orderBy: function (item) {

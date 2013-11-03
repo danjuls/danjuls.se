@@ -9,6 +9,7 @@
     "modernizr": "~2.6.2",
     "jmpress": "~0.4.5",
     "socialfeed": "~0.3.7",
-    "susy": "~1.0.9"
+    "susy": "~1.0.9",
+    "packery": "~1.1.2"
   }
 }

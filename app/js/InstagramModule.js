@@ -11,7 +11,7 @@ var InstagramModule = SocialFeed.Modules.extend({
     // allows us to pass the ident value. ident is the first argument
     // to the module constructor.
     // return 'http://path.to.some/document.json?user=' + this.ident + '&count=' + this.count;
-    return 'https://api.instagram.com/v1/users/'+this.ident+'/media/recent/?access_token=43653951.e3c328e.510098d4ec5b4e6a9845367d7023dabf&count=5';
+    return 'https://api.instagram.com/v1/users/'+this.ident+'/media/recent/?access_token=43653951.e3c328e.510098d4ec5b4e6a9845367d7023dabf&count=3';
   }
 
   , parse: function (resp) {

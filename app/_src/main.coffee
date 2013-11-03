@@ -33,3 +33,4 @@ $ ->
         $("h2.caption span").removeClass().addClass activePage.attr("id")
       else
         $("h2.caption span").hide().removeClass()
+

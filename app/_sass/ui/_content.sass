@@ -79,11 +79,21 @@
     height: auto
     section
       // +columns(12, true)
-      width: 900px
+      width: 768px
       height: 400px
       min-height: 500px
       padding-top: 55px
 
+      .span4
+        +columns(4)
+      .span6
+        +columns(6)
+        &.offset1
+          +columns(6, true)
+      .span8
+        +columns(8, true)
+      .span12
+        +columns(12)
 
 .connect
   padding: 0
@@ -267,4 +277,11 @@ span.black
     border-radius: 50%
     -webkit-border-radius: 50%
     -moz-border-radius: 50%
+
+  +viewports(up-from medium)
+    .feed-item
+      +columns(4)
+      padding: 0 1em
+      min-height: 212px
+
 
