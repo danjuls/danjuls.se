@@ -52,7 +52,7 @@
     perspective: 1200px
 
     section
-      +columns(12)
+      +columns(12, true)
       height: auto
       position: absolute
       top: 0
@@ -83,7 +83,7 @@
       height: 400px
       min-height: 500px
       padding-top: 55px
-
+      visibility: visible
       .span4
         +columns(4)
       .span6
@@ -95,6 +95,16 @@
       .span12
         +columns(12)
 
+      .span12
+        text-align: right
+      &.about
+        h3
+          margin-bottom: 0
+
+      &.sorcery
+        .right
+          h2
+            text-align: left
 .connect
   padding: 0
   list-style: none
@@ -108,7 +118,7 @@
       float: left
       line-height: 90%
       font-family: 'pictonic'
-      font-size: 3rem
+      font-size: 2rem
       padding: .2em .2em .15em .2em
       background: #eeeeee
       background-color: rgba(0, 0, 0, 0.1)
@@ -201,6 +211,7 @@ span.black
     font-size: 11vw
     margin-top: 0
     text-align: center
+    text-shadow: 0px 2px 2px rgba(150, 150, 150, 1)
 
 
 .pusher
@@ -261,6 +272,13 @@ span.black
     border: 1px solid #e1e1e1
     position: relative
     padding: .5em
+    -webkit-box-shadow: 1px 1px 10px 2px rgba(0,0,0,0.31)
+    -moz-box-shadow: 1px 1px 10px 2px rgba(0,0,0,0.31)
+    box-shadow: 1px 1px 10px 2px rgba(0,0,0,0.31)
+
+    &.instagram
+      border: none
+      text-align: center
 
   i
     position: absolute
@@ -277,11 +295,68 @@ span.black
     border-radius: 50%
     -webkit-border-radius: 50%
     -moz-border-radius: 50%
+    padding: .4em
+    background-color: rgba(255,255,255, 1)
+    -webkit-box-shadow: 1px 1px 10px 2px rgba(0,0,0,0.31)
+    -moz-box-shadow: 1px 1px 10px 2px rgba(0,0,0,0.31)
+    box-shadow: 1px 1px 10px 2px rgba(0,0,0,0.31)
+
 
   +viewports(up-from medium)
     .feed-item
       +columns(4)
-      padding: 0 1em
+      padding: 1em
+      margin: .5em
       min-height: 212px
+    &.instagram
 
 
+
+.hint
+
+  position: fixed
+  left: 0
+  right: 0
+  bottom: 100px
+
+  background: rgba(0,0,0,0.5)
+  color: #EEE
+  text-align: center
+
+  padding: 20px
+
+  z-index: 100
+
+  opacity: 0
+
+  -webkit-transform: translateY(400px)
+  -moz-transform:    translateY(400px)
+  -ms-transform:     translateY(400px)
+  -o-transform:      translateY(400px)
+  transform:         translateY(400px)
+
+  -webkit-transition: opacity 1s, -webkit-transform 0.5s 1s
+  -moz-transition:    opacity 1s,    -moz-transform 0.5s 1s
+  -ms-transition:     opacity 1s,     -ms-transform 0.5s 1s
+  -o-transition:      opacity 1s,      -o-transform 0.5s 1s
+  transition:         opacity 1s,         transform 0.5s 1s
+  p
+    font-size: 3em
+    margin: 0
+
+
+.step-title + .hint
+
+  opacity: 1
+
+  -webkit-transform: translateY(0px)
+  -moz-transform:    translateY(0px)
+  -ms-transform:     translateY(0px)
+  -o-transform:      translateY(0px)
+  transform:         translateY(0px)
+
+  -webkit-transition: opacity 1s 5s, -webkit-transform 0.5s 4.5s
+  -moz-transition:    opacity 1s 5s,    -moz-transform 0.5s 4.5s
+  -ms-transition:     opacity 1s 5s,     -ms-transform 0.5s 4.5s
+  -o-transition:      opacity 1s 5s,      -o-transform 0.5s 4.5s
+  transition:         opacity 1s 5s,         transform 0.5s 4.5s

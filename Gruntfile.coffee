@@ -293,14 +293,14 @@ module.exports = (grunt) ->
         verbose: true
 
       check:
-        src: ["<%= yeoman.app %>/css/**/*.css", "<%= yeoman.app %>/_sass/**/*.scss"]
+        src: ["<%= yeoman.app %>/css/**/*.css", "<%= yeoman.app %>/_sass/**/*.sass"]
 
     csslint:
       options:
         csslintrc: ".csslintrc"
 
       check:
-        src: ["<%= yeoman.app %>}/css/**/*.css", "<%= yeoman.app %>}/_sass/**/*.scss"]
+        src: ["<%= yeoman.app %>}/css/**/*.css", "<%= yeoman.app %>}/_sass/**/*.sass"]
 
     concurrent:
       server: ["compass:server", "coffee:dist", "copy:stageCss", "jekyll:server"]
